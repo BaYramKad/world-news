@@ -32,6 +32,7 @@ const News = ({ news, activeIndex, isMobile, titleNews }: NewsProps) => {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         }}
+        spaceBetween={50}
         slidesPerView={isMobile ? 'auto' : 3}
         modules={[FreeMode]}
         onSwiper={(swiper) => (swiperNewsRef.current = swiper)}

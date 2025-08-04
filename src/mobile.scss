@@ -48,10 +48,9 @@
       }
       .swiper-wrapper {
         padding-top: 20px;
-        gap: 20px;
       }
       .swiper-slide {
-        width: min(100%, 166px) !important;
+        width: min(max-content, 166px) !important;
       }
     }
   }
