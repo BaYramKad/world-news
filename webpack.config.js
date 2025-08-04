@@ -67,6 +67,7 @@ module.exports = {
     static: './dist',
     hot: true,
     open: true,
+    historyApiFallback: true,
   },
   mode: 'development',
 };

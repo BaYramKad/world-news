@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export function useWindowWidthMoreThan(x: number): boolean {
+export function useWindowMobile(x: number): boolean {
   const [isMoreThan, setIsMoreThan] = useState(() => window.innerWidth < x);
 
   useEffect(() => {

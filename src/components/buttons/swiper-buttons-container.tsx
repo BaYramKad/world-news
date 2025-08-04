@@ -27,7 +27,6 @@ const SwiperButtonsContainer = ({ swiperRef, className = 'swiper-buttons-contain
 
   const handleSlide = (type: StateOfTypeButton) => {
     if (type === 'next') {
-      console.log(swiperRef.current);
       swiperRef.current?.slideNext();
     } else {
       swiperRef.current?.slidePrev();

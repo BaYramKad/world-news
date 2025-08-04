@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "dev": "webpack serve --config webpack.config.js --mode development",
-    "build": "webpack --config webpack.config.js --mode production"
+    "build": "webpack --config webpack.config.js --mode production",
+    "preview": "npx serve dist"
   },
   "author": "",
   "license": "ISC",
