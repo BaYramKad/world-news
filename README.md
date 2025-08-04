@@ -1,1 +1,1 @@
-Чтобы запустить проект введите команду в терминал ``npm install`` затем ``npm run dev``
+Чтобы запустить проект введите команды в терминал ``git clone https://github.com/BaYramKad/world-news.git`` затем ``npm install`` затем ``npm run dev``
