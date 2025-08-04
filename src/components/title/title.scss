@@ -1,0 +1,17 @@
+.title-container {
+  width: min-content;
+  position: relative;
+  color: var(--text-color);
+  top: 10%;
+  font-weight: 900;
+
+  > .title-line {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: -78px;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--blue-color) -5%, var(--pink-color) 85%);
+  }
+}

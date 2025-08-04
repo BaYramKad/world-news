@@ -1,0 +1,28 @@
+.swiper-buttons-container {
+  display: flex;
+  gap: 20px;
+}
+
+.swiper-button {
+  cursor: pointer;
+  border-radius: 50%;
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+    .next-arrow,
+    .prev-arrow {
+      opacity: 0.3;
+    }
+  }
+  .next-arrow,
+  .prev-arrow {
+    path {
+      stroke-width: 2px;
+    }
+    stroke: var(--text-color);
+    opacity: 0.5;
+    transition: opacity 0.14s ease-in-out;
+    height: 100%;
+    width: 100%;
+  }
+}

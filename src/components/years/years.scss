@@ -1,0 +1,22 @@
+.years-container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  align-items: center;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: calc(9vw + 2px);
+  z-index: -1;
+
+  div:nth-child(2) {
+    color: var(--pink-color);
+    font-weight: 700;
+  }
+}
+
+.year-start {
+  color: var(--blue-color);
+  font-weight: 700;
+}
