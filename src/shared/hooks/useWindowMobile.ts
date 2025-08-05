@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 
 export function useWindowMobile(x: number): boolean {
-  const [isMoreThan, setIsMoreThan] = useState(() => window.innerWidth < x);
+  const [isLessThen, setLessThan] = useState(() => window.innerWidth < x);
 
   useEffect(() => {
     function handleResize() {
-      setIsMoreThan(window.innerWidth < x);
+      setLessThan(window.innerWidth < x);
     }
 
     window.addEventListener('resize', handleResize);
@@ -15,5 +15,5 @@ export function useWindowMobile(x: number): boolean {
     };
   }, [x]);
 
-  return isMoreThan;
+  return isLessThen;
 }

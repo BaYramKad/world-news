@@ -1,7 +1,6 @@
 import { useRef, useState } from 'react';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import type { Swiper as SwiperType } from 'swiper';
 
 import CountYears from './years/count-years';
 import Title from './title';
@@ -12,6 +11,8 @@ import { SwiperCircle } from '../shared/swiper-circle';
 import { news, slides, SlidesType } from '../shared/sourse';
 import { useWindowMobile } from '../shared/hooks/useWindowMobile';
 
+import { SwiperType } from './types/swaper-types';
+
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -20,9 +21,9 @@ import 'swiper/css/scrollbar';
 const WorldHistory = () => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const [currentSlide, setCurrentSlide] = useState<SlidesType>(slides[0]);
-  const isMobile = useWindowMobile(1000);
-
   const swiperRef = useRef<SwiperType>(null);
+  const isMobile = useWindowMobile(768);
+
   const convertIndex = (num: number) => (num > 9 ? num : `0${num + 1}`);
 
   return (
