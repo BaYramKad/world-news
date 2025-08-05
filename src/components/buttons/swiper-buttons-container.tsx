@@ -3,7 +3,12 @@ import React, { useEffect, useState } from 'react';
 import SwiperButon, { StateOfTypeButton } from './swiper-button';
 import { SwiperType } from '../types/swaper-types';
 
-const SwiperButtonsContainer = ({ swiperRef, className = 'swiper-buttons-container' }: { swiperRef: React.RefObject<SwiperType | null>; className?: string }) => {
+interface SwiperButtonsContainerProps {
+  swiperRef: React.RefObject<SwiperType | null>;
+  className?: string;
+}
+
+const SwiperButtonsContainer = ({ swiperRef, className = 'swiper-buttons-container' }: SwiperButtonsContainerProps) => {
   const [isDisabledPrevBtn, setDisabledPrevBtn] = useState(false);
   const [isDisabledNextBtn, setDisabledNextBtn] = useState(false);
 

@@ -21,23 +21,12 @@ interface NewsProps {
 
 const News = ({ news, activeIndex, isMobile, titleNews }: NewsProps) => {
   const swiperNewsRef = useRef<SwiperType>(null);
-  const currentYearsNews = news.find((_, i) => i === activeIndex);
+  const currentYearNews = news.find((_, i) => i === activeIndex);
   return (
     <div className='swiper-news-wrapper'>
       {isMobile && <h2 className='swiper-news-title'>{titleNews}</h2>}
-      <Swiper
-        className='swiper-news'
-        freeMode={isMobile}
-        navigation={{
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        }}
-        spaceBetween={50}
-        slidesPerView={isMobile ? 'auto' : 3}
-        modules={[FreeMode]}
-        onSwiper={(swiper) => (swiperNewsRef.current = swiper)}
-      >
-        {currentYearsNews?.fields.map((item) => (
+      <Swiper className='swiper-news' freeMode={isMobile} spaceBetween={50} slidesPerView={isMobile ? 'auto' : 3} modules={[FreeMode]} onSwiper={(swiper) => (swiperNewsRef.current = swiper)}>
+        {currentYearNews?.fields.map((item) => (
           <SwiperSlide>
             <div className='swiper-news-slide'>
               <h2 className='year'>{item.year}</h2>

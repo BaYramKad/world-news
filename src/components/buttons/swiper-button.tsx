@@ -12,13 +12,13 @@ interface SwiperButtonProps {
 }
 
 const SwiperButton = ({ type, handleSlide, isDisabled }: SwiperButtonProps) => {
-  const arrows = {
+  const buttonsType = {
     next: <Next className='next-arrow' width={50} height={50} />,
     prev: <Prev className='prev-arrow' width={50} height={50} />,
   };
   return (
     <button disabled={isDisabled} className='swiper-button' onClick={() => handleSlide(type)}>
-      {arrows[type]}
+      {buttonsType[type]}
     </button>
   );
 };

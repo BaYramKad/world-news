@@ -10,7 +10,7 @@ import SwiperButtonsContainer from './buttons/swiper-buttons-container';
 import { SwiperCircle } from '../shared/swiper-circle';
 
 import { news, slides, SlidesType } from '../shared/sourse';
-import { useWindowMobile } from '../shared/hooks/useWindowResize';
+import { useWindowMobile } from '../shared/hooks/useWindowMobile';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
